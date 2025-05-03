@@ -1,0 +1,186 @@
+
+/*bagian hero*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Domine', serif;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  background: url('background.png') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+  transition: transform 1s ease, opacity 1s ease;
+  z-index: 10;
+}
+
+.hero.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  background: rgba(0, 0, 50, 0.4);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  position: absolute;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.couple-name {
+  width: 80%;
+  max-width: 360px;
+  margin: 0 auto 25px;
+  display: block;
+  opacity: 0;
+  animation: zoomIn 1s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.greeting, .sub-greeting {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.guest-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.time-box {
+  background: white;
+  color: navy;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  width: 50px;
+}
+
+.invitation-text {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.open-button {
+  background-color: white;
+  color: navy;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@font-face {
+  font-family: 'TheBest';
+  src: url('fonts/the-best-regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Gunakan untuk "The Wedding Of" */
+.wedding-title {
+  font-family: 'TheBest', cursive;
+  font-size: 2.1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Bagian Isi */
+.section {
+  height: 100vh;
+  padding: 60px 20px;
+}
+
+/* Navbar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 2px solid #f7cde6;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.bottom-nav.show {
+  display: flex;
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 12px;
+  color: #cc6699;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item i {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.nav-item.active {
+  color: #e75480;
+}
