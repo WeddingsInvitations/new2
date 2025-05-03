@@ -184,3 +184,94 @@ html, body {
 .nav-item.active {
   color: #e75480;
 }
+
+/* Background */
+#home {
+  background: url('bgbody.png') no-repeat center center/cover;
+  background-attachment: fixed;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Foto Pasangan */
+.photo-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.couple-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(100px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Nama Pasangan */
+.wedding-title {
+  font-family: 'TheBest', cursive;
+  font-size: 2.1rem;
+  margin: 20px 0;
+}
+
+.couple-names {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+name-dan{
+  font-size: 1.8rem;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.name-rifky,
+.name-syafitri {
+  font-size: 1.8rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: fadeInRifky 1s forwards, fadeInSyafitri 1s forwards 0.5s;
+}
+
+.name-syafitri {
+  transform: translateX(100px);
+}
+
+.wedding-date {
+  font-family: 'Domine', serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Scroll Animation */
+.scroll-animation {
+  margin-top: 30px;
+}
+
+/* Animasi */
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRifky {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInSyafitri {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
