@@ -65,3 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('navbar').classList.remove('show');
   }
 });
+
+// Tampilkan foto pasangan saat muncul di layar
+window.addEventListener('scroll', () => {
+  const photo = document.querySelector('.couple-photo');
+  if (photo && photo.getBoundingClientRect().top < window.innerHeight - 100) {
+    photo.classList.add('visible');
+  }
+});
